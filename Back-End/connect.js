@@ -7,9 +7,9 @@ async function main(){
 
     try{
         await client.connect();
-        await listDatabases(client);
+        await listDatabases(client);    
 
-    }catch(e) {
+    } catch(e) {
         console.error(e);
 
     // Close the connection
@@ -20,6 +20,11 @@ async function main(){
 }
 
 main().catch(console.error);
+
+// Enter the data
+async function createList(){
+    
+}
 
 // fetching the databases from the cluster
 async function listDatabases(client){
