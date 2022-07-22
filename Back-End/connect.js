@@ -5,6 +5,7 @@ async function main(){
 
     const client = new MongoClient(URI);
 
+
     try{
         await client.connect();
         await listDatabases(client);    
@@ -15,11 +16,13 @@ async function main(){
     // Close the connection
     } finally {
         await client.close();
+        
     }
 
 }
 
 main().catch(console.error);
+
 
 // Enter the data
 async function createList(){
