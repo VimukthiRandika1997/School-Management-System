@@ -111,10 +111,6 @@ export default function Navbar() {
                 </ul>
                 </li>
             </ul>
-            <div className="absolute bottom-0 w-full text-center">
-                <hr className="m-0"/>
-                <p className="py-2 text-sm text-gray-700">tailwind-elements.com</p>
-            </div>
             </div>
         </div>
     )
