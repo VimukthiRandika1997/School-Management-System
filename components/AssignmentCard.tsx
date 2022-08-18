@@ -344,22 +344,22 @@ export default function AssignmentCard() {
                     </td>
                     </tr>
                 </tbody>
-                <!--Table body-->
+                {/* <!--Table body--> */}
                 </table>
 
-                <!-- Table -->
+                {/* <!-- Table --> */}
 
-                <!--Bottom Table UI-->
+                {/* <!--Bottom Table UI--> */}
                 <div className="d-flex justify-content-center">
-                <!--Pagination -->
+                {/* <!--Pagination --> */}
                 <nav className="pt-2 my-2">
                     <ul className="mb-0 pagination pagination-circle pg-info">
-                    <!--First-->
+                    {/* <!--First--> */}
                     <li className="clearfix page-item d-none d-md-block">
                         <a href="#" className="page-link waves-effect">
                         First </a>
                     </li>
-                    <!--Arrow left-->
+                    {/* <!--Arrow left--> */}
                     <li className="page-item">
                         <a href="#" className="page-link waves-effect" aria-label="Previous">
                         <span aria-hidden="true">«</span>
@@ -367,7 +367,7 @@ export default function AssignmentCard() {
                             Previous </span>
                         </a>
                     </li>
-                    <!--Numbers-->
+                    {/* <!--Numbers--> */}
                     <li className="page-item">
                         <a href="#" className="page-link waves-effect">11</a>
                     </li>

@@ -18,7 +18,7 @@ export default function Chat(){
                 <a href="#!" className="d-flex justify-content-between link-light">
                   <div className="flex-row d-flex">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-8.webp" alt="avatar"
-                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">
+                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60"/>
                     <div className="pt-1">
                       <p className="mb-0 fw-bold">John Doe</p>
                       <p className="text-white small">Hello, Are you there?</p>
@@ -34,7 +34,7 @@ export default function Chat(){
                 <a href="#!" className="d-flex justify-content-between link-light">
                   <div className="flex-row d-flex">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-1.webp" alt="avatar"
-                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">
+                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60"/>
                     <div className="pt-1">
                       <p className="mb-0 fw-bold">Danny Smith</p>
                       <p className="text-white small">Lorem ipsum dolor sit.</p>
@@ -49,7 +49,7 @@ export default function Chat(){
                 <a href="#!" className="d-flex justify-content-between link-light">
                   <div className="flex-row d-flex">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-2.webp" alt="avatar"
-                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">
+                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60"/>
                     <div className="pt-1">
                       <p className="mb-0 fw-bold">Alex Steward</p>
                       <p className="text-white small">Lorem ipsum dolor sit.</p>
@@ -64,7 +64,7 @@ export default function Chat(){
                 <a href="#!" className="d-flex justify-content-between link-light">
                   <div className="flex-row d-flex">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-3.webp" alt="avatar"
-                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">
+                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60"/>
                     <div className="pt-1">
                       <p className="mb-0 fw-bold">Ashley Olsen</p>
                       <p className="text-white small">Lorem ipsum dolor sit.</p>
@@ -79,7 +79,7 @@ export default function Chat(){
                 <a href="#!" className="d-flex justify-content-between link-light">
                   <div className="flex-row d-flex">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-4.webp" alt="avatar"
-                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">
+                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60"/>
                     <div className="pt-1">
                       <p className="mb-0 fw-bold">Kate Moss</p>
                       <p className="text-white small">Lorem ipsum dolor sit.</p>
@@ -94,7 +94,7 @@ export default function Chat(){
                 <a href="#!" className="d-flex justify-content-between link-light">
                   <div className="flex-row d-flex">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp" alt="avatar"
-                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">
+                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60"/>
                     <div className="pt-1">
                       <p className="mb-0 fw-bold">Lara Croft</p>
                       <p className="text-white small">Lorem ipsum dolor sit.</p>
@@ -109,7 +109,7 @@ export default function Chat(){
                 <a href="#!" className="d-flex justify-content-between link-light">
                   <div className="flex-row d-flex">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp" alt="avatar"
-                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">
+                      className="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60"/>
                     <div className="pt-1">
                       <p className="mb-0 fw-bold">Brad Pitt</p>
                       <p className="text-white small">Lorem ipsum dolor sit.</p>
@@ -133,7 +133,7 @@ export default function Chat(){
         <ul className="text-white list-unstyled">
           <li className="mb-4 d-flex justify-content-between">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp" alt="avatar"
-              className="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
+              className="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60"/>
             <div className="card mask-custom">
               <div className="p-3 card-header d-flex justify-content-between"
                 style="border-bottom: 1px solid rgba(255,255,255,.3);">
@@ -163,11 +163,11 @@ export default function Chat(){
               </div>
             </div>
             <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp" alt="avatar"
-              className="rounded-circle d-flex align-self-start ms-3 shadow-1-strong" width="60">
+              className="rounded-circle d-flex align-self-start ms-3 shadow-1-strong" width="60"/>
           </li>
           <li className="mb-4 d-flex justify-content-between">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp" alt="avatar"
-              className="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
+              className="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60"/>
             <div className="card mask-custom">
               <div className="p-3 card-header d-flex justify-content-between"
                 style="border-bottom: 1px solid rgba(255,255,255,.3);">
