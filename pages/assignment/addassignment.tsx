@@ -1,57 +1,63 @@
-import Link from 'next/link'
-import React from 'react'
-import styles from '../assignment/Assignment.module.css'
+import { MailOutlined } from '@ant-design/icons';
+import { Menu, Switch } from 'antd';
+import React, { useState } from 'react';
 
-
-
-function addassignment() {
-  return (
-    <div className={styles.mainContainer}>
-        <div className={styles.leftBar}>
-            <div className={styles.imageContainer}>
-                <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="profile" className={styles.profileImage}/>
-            </div>
-            <div className={styles.textContainer}>
-                <h3> Vithushan Logan </h3>
-                <h3> Grade 11A </h3>
-            </div>
-            <div className={styles.selectOptionsCotainer}>
-    
-                <ul className={styles.selectOptionsContent}>
-                <Link href="/">
-                    <a>Home</a>
-                </Link>
-                </ul>
-
-                <ul className={styles.selectOptionsContent}>
-                <Link href="/">
-                    <a>Staff Details</a>
-                </Link>
-                </ul>
-
-                <ul className={styles.selectOptionsContent}>
-                <Link href="/">
-                    <a>Classes</a>
-                </Link>
-                </ul>
-
-                <ul className={styles.selectOptionsContent}>
-                <Link href="/">
-                    <a>Chat Box</a>
-                </Link>
-                </ul>
-
-                <ul className={styles.selectOptionsContent}>
-                <Link href="/">
-                    <a>Updated News</a>
-                </Link>
-                </ul>
-                
-
-            </div>
-        </div>
-    </div>
-  )
+function getItem(label, key, icon, children, theme) {
+  return {
+    key,
+    icon,
+    children,
+    label,
+    theme,
+  };
 }
 
-export default addassignment
+const addassignment = () => {
+  const [theme, setTheme] = useState('light');
+  const [current, setCurrent] = useState('1');
+
+  const changeTheme = (value) => {
+    setTheme(value ? 'dark' : 'light');
+  };
+
+  const onClick = (e) => {
+    setCurrent(e.key);
+  };
+
+  const items = [
+    getItem(
+      'Navigation One',
+      'sub1',
+      <MailOutlined />,
+      [getItem('Option 1', '1'), getItem('Option 2', '2'), getItem('Option 3', '3')],
+      theme,
+    ),
+    getItem('Option 5', '5'),
+    getItem('Option 6', '6'),
+  ];
+  return (
+    <>
+      <Switch
+        checked={theme === 'dark'}
+        onChange={changeTheme}
+        checkedChildren="Dark"
+        unCheckedChildren="Light"
+      />
+      <br />
+      <br />
+      <Menu
+        onClick={onClick}
+        style={{
+          width: 256,
+        }}
+        defaultOpenKeys={['sub1']}
+        selectedKeys={[current]}
+        mode="vertical"
+        theme="dark"
+        items={items}
+      />
+    </>
+  );
+};
+
+export default addassignment;
