@@ -10,7 +10,7 @@
     background-color: #97ed5e;
     float: left;
     padding-left: 3% ;
-    padding-top: 5%;
+    padding-top: 10%;
    
     }
 
@@ -35,3 +35,34 @@
     
 }
 
+
+
+@media (max-width: 500px) {
+    .leftBar {
+        width: 40%;
+        height: 100%;
+        background-color: #ed5e8b;
+        float: left;
+        padding-left: 3% ;
+        padding-top: 5%;
+       
+        }
+    .profileImage{
+        width: 40%;
+        height: 40%;
+        background-color: #f9f7f7;
+        border-radius: 30%;
+        margin-bottom: 10%;
+        }
+    .selectOptionsCotainer{
+        margin-bottom: 30%;
+        margin-top: 30%;
+        flex:Display;
+        flex-direction: column;
+    }
+    .selectOptionsContent{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        
+    }
+}
