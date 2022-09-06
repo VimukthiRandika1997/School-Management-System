@@ -3,8 +3,8 @@ import {FaIcons,FaGoogle,FaApple,FaGithub, FaEnvelope,FaKey} from 'react-icons/f
 
 function login() {
   return (
-    <main className='flex flex-col items-center justify-center min-h-screen py-2 bg-white'>
-        <div className='flex flex-row  justify-center w-full bg-grey flex=1 py-2 px=20 text-center w-2/3 max-w-4xl rounded-2xl shadow-2xl'>
+    <main className='flex flex-col items-center justify-center min-h-screen py-2 bg-primary'>
+        <div className='flex flex-row  justify-center w-full bg-white flex=1 py-2 px=20 text-center w-2/3 max-w-4xl rounded-2xl shadow-2xl'>
             <div className='w-3/5 p-5'>
                 <div>
                     <h2 className='mb-5 text-2xl font-bold text-primary'> Sign in to your Account</h2>
@@ -33,7 +33,7 @@ function login() {
                 <h2 className='mb-5 text-2xl font-bold'> Welcome to SMS </h2>
                 <div className='inline-block w-10 mb-2 border border-white'></div>
                 <p className='mb-10'> This is the School Management System</p>
-                <a href='#' className='inline-block px-12 py-3 font-semibold border-2 rounded-full hover:bg-white hover:text-primary ' > SignUp</a>
+                <a href='./signup/1' className='inline-block px-12 py-3 font-semibold border-2 rounded-full hover:bg-white hover:text-primary ' > SignUp</a>
             </div>
         </div>
         
