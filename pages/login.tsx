@@ -33,7 +33,7 @@ function login() {
                 <h2 className='mb-5 text-2xl font-bold'> Welcome to SMS </h2>
                 <div className='inline-block w-10 mb-2 border border-white'></div>
                 <p className='mb-10'> This is the School Management System</p>
-                <a href='#' className='inline-block px-12 py-3 font-semibold border-2 rounded-full hover:bg-white hover:text-primary ' > SignUp</a>
+                <a href='./signup/1' className='inline-block px-12 py-3 font-semibold border-2 rounded-full hover:bg-white hover:text-primary ' > SignUp</a>
             </div>
         </div>
         
