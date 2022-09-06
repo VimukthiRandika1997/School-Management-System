@@ -32,7 +32,7 @@ function signup() {
                               placeholder="Confirm Password" />
                           <button
                                 type="submit"
-                                className="w-full py-3 my-1 text-center text-white rounded bg-primary hover:bg-green-dark focus:outline-none"
+                                className="w-full py-3 my-1 text-center text-white rounded bg-primary hover:bg-green-dark focus:outline-none hover:bg-black hover:text-white "
                             >Create Account</button>
 
                         

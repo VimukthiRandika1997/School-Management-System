@@ -31,8 +31,8 @@ function signup() {
                               name="confirm_password"
                               placeholder="Confirm Password" />
 
-                          <a href='../login/'
-                              className="inline-block w-full p-5 py-3 my-1 text-center text-white rounded bg-primary align-items-center " 
+                          <a href='../signup/2/'
+                              className="inline-block w-full p-5 py-3 my-1 text-center text-white rounded bg-primary align-items-center hover:bg-black hover:text-white " 
                           >Next page (1/2)</a>
                       </div>
 
