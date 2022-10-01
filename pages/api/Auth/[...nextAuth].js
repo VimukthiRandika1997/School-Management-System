@@ -1,12 +1,30 @@
-import NextAuth from "next-auth/next"
-import GoogleProvider from "next-auth/providers/google"
+// import NextAuth from 'next-auth'
+// import Providers from 'next-auth/providers'
 
-export default NextAuth({
-    providers:[
-        GoogleProvider({
-            clinetID: process.env.GOOGLE_CLIENT_ID,
-            clinetSecret: process.env.GOOGLE_CLIENT_SECRET
-        })
-    ]
-    secret: process.env.JWT_SECRET
-})
+// export default NextAuth({
+//   providers: [
+//     Providers.GitHub({
+//       clientId: process.env.GITHUB_ID,
+//       clientSecret: process.env.GITHUB_SECRET
+//     })
+//   ],
+//   database: process.env.DB_URL,
+//   session: {
+//     jwt: true
+//   },
+//   jwt: {
+//     secret: 'asdcvbtjhm'
+//   },
+//   callbacks: {
+//     async jwt(token, user) {
+//       if (user) {
+//         token.id = user.id
+//       }
+//       return token
+//     },
+//     async session(session, token) {
+//       session.user.id = token.id
+//       return session
+//     }
+//   }
+// })
