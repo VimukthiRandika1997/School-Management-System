@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   env:{
-    MONGO_URI:"" 
+    MONGO_URI:"mongodb+srv://SMS:sms123@sms-1.xsfh5gt.mongodb.net/?retryWrites=true&w=majority" 
   }
 }
 

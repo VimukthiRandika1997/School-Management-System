@@ -32,8 +32,8 @@ function profile() {
             {/* Routing page */}
             <div className='mt-20'>
                
-                <a href='#' className='flex items-center pl-10 mt-3 text-2xl lg:text-black'> <AiFillHome className='mr-3'/> Home</a>
-                <a href='#' className='flex items-center pl-10 mt-3 text-2xl lg:text-black'> <AiFillIdcard className='mr-3'/> Staff Details</a>
+                <a href='welcome' className='flex items-center pl-10 mt-3 text-2xl lg:text-black'> <AiFillHome className='mr-3'/> Home</a>
+                <a href='index' className='flex items-center pl-10 mt-3 text-2xl lg:text-black'> <AiFillIdcard className='mr-3'/> Staff Details</a>
                 <a href='#' className='flex items-center pl-10 mt-3 text-2xl lg:text-black'> <AiFillGold className='mr-3'/> Classes</a>
                 <a href='#' className='flex items-center pl-10 mt-3 text-2xl lg:text-black'> <AiFillMail className='mr-3'/> Chat Box</a>
                 <a href='#' className='flex items-center pl-10 mt-3 text-2xl lg:text-black'> <AiFillFire className='mr-3'/> Updated News</a>
@@ -44,4 +44,4 @@ function profile() {
   )
 }
 
-export default profile
+export default profile;
