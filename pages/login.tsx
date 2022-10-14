@@ -1,7 +1,17 @@
 import React from 'react'
 import {FaIcons,FaGoogle,FaApple,FaGithub, FaEnvelope,FaKey} from 'react-icons/fa'
+import {useForm} from 'react-hook-form'
 
 function login() {
+    const {
+        handleSubmit,
+        register,
+        formState:{errors},
+    } = useForm();
+
+    const submitHandler = (data) => {}
+
+    
   return (
     <main className='flex flex-col items-center justify-center min-h-screen py-2 bg-primary'>
         <div className='flex flex-row  justify-center w-full bg-white flex=1 py-2 px=20 text-center w-2/3 max-w-4xl rounded-2xl shadow-2xl'>
@@ -16,17 +26,27 @@ function login() {
                     <FaGithub className='mx-1 rounded size-big'/>
                 </div>
                 <div className='flex flex-col items-center mb-10 '>
-                    <div className='flex flex-row items-center w-64 p-4 mb-10 bg-gray-100 rounded-full'>
-                        <FaEnvelope className='mr-2'/>
-                        <input type='text' className='bg-gray-100 ' placeholder='Email'/>
-                    </div>
-                    <div className='flex items-center w-64 p-4 mb-10 bg-gray-100 rounded-full'> 
-                        <FaKey className='mr-2 '/>
-                        <input type='password' className='bg-gray-100 ' placeholder='Password'/>
-                    </div>
+                        <form  onSubmit={handleSubmit(submitHandler)} >
+                            <div className='flex flex-row items-center w-64 p-4 mb-10 bg-gray-100 rounded-full'>
+                            
+                                <FaEnvelope className='mr-2'/>
+                                <input type='email' 
+                                    {...register('email', {required: 'Please enter the email'})}
+                                    
+                                    id='email' className='bg-gray-100 ' placeholder='Email'
+                                />
+                            
+                                {errors.email && <h1> {errors.email.message} </h1>}
+                                
+                            </div>
+                            <div className='flex items-center w-64 p-4 mb-10 bg-gray-100 rounded-full'> 
+                                <FaKey className='mr-2 '/>
+                                <input type='password' id='password' className='bg-gray-100 ' placeholder='Password'/>
+                            </div>
 
-                    <a href='#' className='inline-block px-12 py-3 font-semibold border-2 rounded-full hover:bg-primary hover:text-white ' > Sign In</a>
+                            <a href='#' className='inline-block px-12 py-3 font-semibold border-2 rounded-full hover:bg-primary hover:text-white ' > Sign In</a>
                     
+                        </form>
                 </div>
             </div>
             <div className='w-2/5 p-5 px-5 text-white rounded-br-2xl bg-primary rounded-tr-2xl py-36 '>
