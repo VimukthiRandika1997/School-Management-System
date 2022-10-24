@@ -5,7 +5,7 @@ export default async function create_teacher(req, res) {
   try {
     await db.connect();
 
-    // Validate the message
+    // Validate the data
 
     // create the record
     await Teacher.create(req.body);
