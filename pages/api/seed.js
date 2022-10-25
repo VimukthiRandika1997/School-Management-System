@@ -10,8 +10,8 @@ const handler = async (req, res) => {
   await User.insertMany(data.users);
   await Student.deleteMany();
   await Student.insertMany(data.students);
-  // await Teacher.deleteMany();
-  // await Teacher.insertMany(data.teachers);
+  await Teacher.deleteMany();
+  await Teacher.insertMany(data.teachers);
   await db.disconnect();
   res.send({ message: "seeded successfully" });
 };
