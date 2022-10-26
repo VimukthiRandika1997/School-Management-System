@@ -12,10 +12,11 @@ const handler = nc()
       res
         .status(201)
         .json({ message: "Student record is created successfully!" });
-
-      res.status(401).json({ message: "Access is denied!" });
     } catch (error) {
+      res.status(400).json({ message: "Error while creating record!" });
+      res.end();
       console.log("Error: " + error.message);
+      return;
     }
   })
   .get((req, res) => {});
