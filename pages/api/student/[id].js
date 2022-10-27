@@ -1,5 +1,5 @@
 import nc from "next-connect";
-import db from "../../../utils/db";
+import connection from "../../../middleware/db";
 import Student from "../../../models/Student";
 
 const error_pages = {
@@ -12,7 +12,11 @@ const error_pages = {
   },
 };
 
-const handler = nc(error_pages)
+const handler = nc(error_pages);
+
+handler.use(connection.db_connect);
+
+handler
   .get(async (req, res) => {
     try {
       const user = await Student.findOne({ student_id: req.query.id }).exec();
@@ -68,5 +72,7 @@ const handler = nc(error_pages)
       return;
     }
   });
+
+handler.use(connection.db_disconnect);
 
 export default handler;
