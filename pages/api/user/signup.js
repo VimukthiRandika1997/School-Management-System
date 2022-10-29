@@ -23,8 +23,9 @@ handler.post(async (req, res) => {
     if (!(body.email && body.password)) {
       return res.status(400).json({ error: "Data not formatted corrrectly!" });
     }
-    const already_in = User.findOne({ email: body.email });
+    const already_in = await User.findOne({ email: body.email }).exec();
     if (already_in) {
+      console.log(already_in);
       return res.status(400).json({ message: "User is already in there!" });
     }
     // creating a new mongoose doc from user data

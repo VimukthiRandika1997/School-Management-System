@@ -1,4 +1,5 @@
 import bcrypt from "bcryptjs";
+import mongoose from "mongoose";
 
 const data = {
   users: [
@@ -35,6 +36,31 @@ const data = {
       teacher_address: "Flower road, Colombo",
       gender: "male",
       phone_number: "0772348962",
+    },
+  ],
+  subjects: [
+    {
+      subject_id: "ENG11",
+      title: "English",
+      teacher_id: "001",
+    },
+    {
+      subject_id: "SIN11",
+      title: "Sinhala",
+      notes: [{ topic: "Literature" }],
+      teacher_id: "002",
+    },
+    {
+      subject_id: "TAM11",
+      title: "Sinhala",
+      notes: [{ topic: "Literature", data: ["fafa"] }],
+      teacher_id: "003",
+    },
+  ],
+  tests: [
+    {
+      my_id: mongoose.Types.ObjectId(123),
+      url: "fafafadf",
     },
   ],
 };
