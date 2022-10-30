@@ -20,7 +20,7 @@ handler.get(async (req, res) => {
   try {
     const subjects = await Subject.find({}).exec();
     const data = await Subject.find({}).where({ teacher_id: "001" }).populate();
-    console.log(data);
+    console.log(subjects);
     if (!subjects) {
       res.status(404).json({ message: "No record is found!" });
       res.end();
