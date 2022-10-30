@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   FaIcons,
   FaGoogle,
@@ -8,15 +9,28 @@ import {
   FaKey,
 } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import { signIn } from "next-auth/react";
+import Link from "next/link";
 
 function Login() {
   const {
-    handleSubmit,
     register,
+    handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
+  const [userInfo, setUserInfo] = useState({ email: "", password: "" });
 
-  const submitHandler = (data) => {};
+  const onSubmit = async (data, e) => {
+    // validate user data
+    e.preventDefault();
+    const res = await signIn("credentials", {
+      email: userInfo.email,
+      password: userInfo.password,
+      redirect: false,
+    });
+    console.log(res);
+  };
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen py-2 bg-primary">
@@ -37,36 +51,41 @@ function Login() {
             <FaGithub className="mx-1 rounded size-big" />
           </div>
           <div className="flex flex-col items-center mb-10 ">
-            <form onSubmit={handleSubmit(submitHandler)}>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="flex flex-row items-center w-64 p-4 mb-10 bg-gray-100 rounded-full">
                 <FaEnvelope className="mr-2" />
                 <input
                   type="email"
-                  {...register("email", { required: "Please enter the email" })}
+                  value={userInfo.email}
+                  onChange={({ target }) =>
+                    setUserInfo({ ...userInfo, email: target.value })
+                  }
+                  // {...register("email", { required: "Please enter the email" })}
                   id="email"
                   className="bg-gray-100 "
                   placeholder="Email"
                 />
 
-                {errors.email && <h1> {errors.email.message} </h1>}
+                {/* {errors.email && <h1> {errors.email.message} </h1>} */}
               </div>
               <div className="flex items-center w-64 p-4 mb-10 bg-gray-100 rounded-full">
                 <FaKey className="mr-2 " />
                 <input
                   type="password"
+                  value={userInfo.password}
+                  onChange={({ target }) =>
+                    setUserInfo({ ...userInfo, password: target.value })
+                  }
                   id="password"
                   className="bg-gray-100 "
                   placeholder="Password"
                 />
               </div>
-
-              <a
-                href="#"
+              <input
+                type="submit"
+                value="Sign In"
                 className="inline-block px-12 py-3 font-semibold border-2 rounded-full hover:bg-primary hover:text-white "
-              >
-                {" "}
-                Sign In
-              </a>
+              />
             </form>
           </div>
         </div>
@@ -74,13 +93,12 @@ function Login() {
           <h2 className="mb-5 text-2xl font-bold"> Welcome to SMS </h2>
           <div className="inline-block w-10 mb-2 border border-white"></div>
           <p className="mb-10"> This is the School Management System</p>
-          <a
-            href="./signup/1"
-            className="inline-block px-12 py-3 font-semibold border-2 rounded-full hover:bg-white hover:text-primary "
-          >
-            {" "}
-            SignUp
-          </a>
+          <Link href={"/signup/1"}>
+            <a className="inline-block px-12 py-3 font-semibold border-2 rounded-full hover:bg-white hover:text-primary ">
+              {" "}
+              SignUp
+            </a>
+          </Link>
         </div>
       </div>
     </main>

@@ -54,7 +54,6 @@ const data = {
       subject_id: "TAM11",
       title: "Sinhala",
       notes: [{ topic: "Literature", data: ["fafa"] }],
-      teacher_id: "003",
     },
   ],
   tests: [
