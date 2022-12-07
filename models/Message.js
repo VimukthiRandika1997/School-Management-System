@@ -1,7 +1,4 @@
-import { ObjectID } from "bson";
 import mongoose from "mongoose";
-import Student from "./Student";
-import Teacher from "./Teacher";
 
 const messageSchema = new mongoose.Schema(
     {
@@ -9,12 +6,12 @@ const messageSchema = new mongoose.Schema(
         information: { type: String, required: true },
         date: { type: Date, required: true },
         student_id: {
-            type: ObjectID,
-            ref: Student,
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: "Student",
         },
         teacher_id: {
-            type: ObjectID,
-            ref: Teacher,
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: "Teacher",
         },
     },
     {

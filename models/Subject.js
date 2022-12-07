@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-import { ObjectID } from "bson";
-import Teacher from "./Teacher";
 
 const subjectSchema = new mongoose.Schema(
     {
@@ -12,10 +10,33 @@ const subjectSchema = new mongoose.Schema(
                 data: [{ type: String, unique: true, sparse: true }],
             },
         ],
-        teacher_id: {
-            type: ObjectID,
-            ref: Teacher,
+        teacher: {
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: "Teacher",
         },
+        // --------MN-relations---------
+        // Student-Subject
+        students: [
+            {
+                student: {
+                    type: mongoose.SchemaTypes.ObjectId,
+                    ref: "Student",
+                },
+                term: [
+                    {
+                        term_name: { type: String },
+                        mark: { type: Number },
+                    },
+                ],
+            },
+        ],
+        // Class-Subject
+        classes: [
+            {
+                type: mongoose.SchemaTypes.ObjectId,
+                ref: "Class",
+            },
+        ],
     },
     {
         timestamps: true,
@@ -26,6 +47,16 @@ const subjectSchema = new mongoose.Schema(
 subjectSchema.virtual("notesCount").get(function () {
     console.log("virtual notesCount from Subject");
     return this.notes.length;
+});
+
+subjectSchema.virtual("studentCount").get(function () {
+    console.log("virtual studentCount from Subject");
+    return this.studentsIDs.length;
+});
+
+subjectSchema.virtual("classesCount").get(function () {
+    console.log("virtula total classes from subject");
+    return this.classes.length;
 });
 
 const Subject =

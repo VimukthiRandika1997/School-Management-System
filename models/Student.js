@@ -10,6 +10,17 @@ const studentSchema = new mongoose.Schema(
         profile_image: { type: String, required: false },
         gender: { type: String, required: true },
         phone_numbers: [{ type: String }],
+        // MN-relations
+        subjects: [
+            {
+                type: mongoose.SchemaTypes.ObjectId,
+                ref: "Subject",
+            },
+        ],
+        class: {
+            year_of_study: { type: String },
+            _class: { type: mongoose.SchemaTypes.ObjectId, ref: "Class" },
+        },
     },
     {
         timestamps: true,

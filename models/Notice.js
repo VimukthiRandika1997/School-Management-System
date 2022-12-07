@@ -1,6 +1,4 @@
-import { ObjectId } from "mongodb";
 import mongoose from "mongoose";
-import Teacher from "./Teacher";
 
 const noticeSchema = new mongoose.Schema(
     {
@@ -9,8 +7,8 @@ const noticeSchema = new mongoose.Schema(
         release_date: { type: Date, required: true },
         information: { type: String, required: true },
         teacher_id: {
-            type: ObjectId,
-            ref: Teacher,
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: "Teacher",
         },
     },
     {
